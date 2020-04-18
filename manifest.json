@@ -1,16 +1,19 @@
 {
   "name": "Teknotra",
   "version": "1.0",
-  "description": "Teknotra.com'da paylaşılmış son yazılar",
+  "description": "Teknolojik haberler ve teknolojik incelemeler başta olmak üzere araba ve ekonomi dahil Teknotra.com'da paylaşılmış son yazılar",
   "manifest_version": 2,
-  "icons":{
-    "128":"icon128.png",
-    "48":"icon48.png",
-    "16":"icon16.png"
-  },
   "browser_action":{
-    "default_icon":"icon16.png",
+    "default_icon":"16x16.png",
     "default_popup": "popup.html"
   },
-  "author":"Ege Şenkul"
+  "author":"Ege Şenkul",
+  "icons":{
+    "128":"128x128.png",
+    "48":"48x48.png",
+    "16":"16x16.png"
+  },
+  "permissions": [
+    "https://*/"
+  ]
 }
