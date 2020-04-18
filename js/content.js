@@ -8,31 +8,31 @@ $(document).ready(() => {
 
             if(data[0].title.rendered.length>57)
             {
-                $(".news #ilkYaziBaslik").text(decodeURIComponent(data[0].title.rendered.substring(0,60)+"..."));
+                $(".news #ilkYaziBaslik").text(data[0].title.rendered.substring(0,60).replace("&#8211;","-")+"...");
             }
             else{
-                $(".news #ilkYaziBaslik").text(data[0].title.rendered);
+                $(".news #ilkYaziBaslik").text(data[0].title.rendered.replace("&#8211;","-"));
             }
-            document.getElementById("ilkYaziLink").href = data[0].link+"amp";
+            document.getElementById("ilkYaziLink").href = data[0].link;
 
             if(data[1].title.rendered.length>57)
             {
-                $(".news #ikinciYaziBaslik").text(data[1].title.rendered.substring(0,60)+"...");
+                $(".news #ikinciYaziBaslik").text(data[1].title.rendered.substring(0,60).replace("&#8211;","-")+"...");
             }
             else{
-                $(".news #ikinciYaziBaslik").text(data[1].title.rendered);
+                $(".news #ikinciYaziBaslik").text(data[1].title.rendered.replace("&#8211;","-"));
             }
-            document.getElementById("ikinciYaziLink").href = data[1].link+"amp";
+            document.getElementById("ikinciYaziLink").href = data[1].link;
 
             if(data[2].title.rendered.length>57)
             {
-                 $(".news #ucuncuYaziBaslik").text(data[2].title.rendered.substring(0,60)+"...");
+                 $(".news #ucuncuYaziBaslik").text(data[2].title.rendered.substring(0,60).replace("&#8211;","-")+"...");
             }
             else
             {
-                $(".news #ucuncuYaziBaslik").text(data[2].title.rendered);
+                $(".news #ucuncuYaziBaslik").text(data[2].title.rendered.replace("&#8211;","-"));
             }
-            document.getElementById("ucuncuYaziLink").href = data[2].link+"amp";
+            document.getElementById("ucuncuYaziLink").href = data[2].link;
         }
     });
 });
